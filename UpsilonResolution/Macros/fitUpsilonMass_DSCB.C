@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cmath>
 
-#include "./Style/GetPullDistribution_ele.h"
-#include "./Style/Legends_ele.h"
+#include "../Style/GetPullDistribution_ele.h"
+#include "../Style/Legends_ele.h"
 
 #include "RooRealVar.h"
 #include "RooDataSet.h"
 
-#include "./Style/tdrStyle.C"
-#include "./Style/CMS_lumi.C"
+#include "../Style/tdrStyle.C"
+#include "../Style/CMS_lumi.C"
 
 #include "TLegend.h"
 
@@ -19,7 +19,7 @@ int pEnergy = 275; // GeV
 
 TCanvas* fitUpsilon_DSCB(int ymin = 0, int ymax = 1, int markerColor = kBlack, int lineColor = kAzure-1){
     
-    const char* infileName = Form("./Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y%d_%d.root", ymin, ymax);
+    const char* infileName = Form("../Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y%d_%d.root", ymin, ymax);
 
     // need a header file
     setTDRStyle();
@@ -188,7 +188,7 @@ TCanvas* fitUpsilon_DSCB(int ymin = 0, int ymax = 1, int markerColor = kBlack, i
     pad1->Draw();
     pad2->Draw();
 
-    cFit->SaveAs(Form("./Graphs/SeededUpsilonFit_ep_18x275_DSCB_allParas_y%d_%d.png", ymin, ymax));
+    cFit->SaveAs(Form("../Graphs/SeededUpsilonFit_ep_18x275_DSCB_allParas_y%d_%d.png", ymin, ymax));
 
     return cFit;
 }
@@ -263,5 +263,5 @@ void drawFinalPlot(){
     gPad->Modified();
     gPad->Update();
 
-    c1->SaveAs("./Graphs/SeededUpsilonFit_ep_18x275_DSCB.png");
+    c1->SaveAs("../Graphs/SeededUpsilonFit_ep_18x275_DSCB.png");
 }

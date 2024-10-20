@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cmath>
 
-#include "./Style/GetPullDistribution_ele.h"
-#include "./Style/Legends_ele.h"
+#include "../Style/GetPullDistribution_ele.h"
+#include "../Style/Legends_ele.h"
 
 #include "RooRealVar.h"
 #include "RooDataSet.h"
 
-#include "./Style/tdrStyle.C"
-#include "./Style/CMS_lumi.C"
+#include "../Style/tdrStyle.C"
+#include "../Style/CMS_lumi.C"
 
 #include "TLegend.h"
 
@@ -19,9 +19,9 @@ int pEnergy = 275; // GeV
 
 void skimEICReconOutput(int ymin = 0, int ymax = 1){
 
-    const char* infileName = "./Files/ep_UpsilonCombined_18x275_podio_output.root";
+    const char* infileName = "../Files/ep_UpsilonCombined_18x275_podio_output.root";
 
-    const char* outfileName = Form("./Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y%d_%d.root", ymin, ymax);
+    const char* outfileName = Form("../Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y%d_%d.root", ymin, ymax);
 
 
     /// Read EICrecon output file 

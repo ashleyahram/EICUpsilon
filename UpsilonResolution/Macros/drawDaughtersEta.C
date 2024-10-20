@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cmath>
 
-#include "./Style/GetPullDistribution_ele.h"
-#include "./Style/Legends_ele.h"
+#include "../Style/GetPullDistribution_ele.h"
+#include "../Style/Legends_ele.h"
 
 #include "RooRealVar.h"
 #include "RooDataSet.h"
 
-#include "./Style/tdrStyle.C"
-#include "./Style/CMS_lumi.C"
+#include "../Style/tdrStyle.C"
+#include "../Style/CMS_lumi.C"
 
 #include "TLegend.h"
 
@@ -19,7 +19,7 @@ int pEnergy = 275; // GeV
 
 void drawEtaGraph(int ymin = 0, int ymax = 1) {
 
-    const char* infileName = Form("./Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y%d_%d.root", ymin, ymax);
+    const char* infileName = Form("../Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y%d_%d.root", ymin, ymax);
 
     // need a header file
     setTDRStyle();
@@ -178,12 +178,12 @@ void drawEtaGraph(int ymin = 0, int ymax = 1) {
     }
     else cout << "not found stat box!!" << endl;
 
-    c1->SaveAs(Form("./Graphs/SeededElectronPseudorapidity_ep_%dx%d_y_%d_%d.png", eEnergy, pEnergy, ymin, ymax));
+    c1->SaveAs(Form("../Graphs/SeededElectronPseudorapidity_ep_%dx%d_y_%d_%d.png", eEnergy, pEnergy, ymin, ymax));
 }
 
 void drawRapidityGraph() {
 
-    const char* infileName = Form("./Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y-3_4.root");
+    const char* infileName = Form("../Files/ep_UpsilonCombined_18x275_podio_seeded_MCntuple_y-3_4.root");
 
     // need a header file
     setTDRStyle();
@@ -291,5 +291,5 @@ void drawRapidityGraph() {
     }
     else cout << "not found stat box!!" << endl;
 
-    c1->SaveAs(Form("./Graphs/SeededUpsilonRapidity_ep_%dx%d.png", eEnergy, pEnergy));
+    c1->SaveAs(Form("../Graphs/SeededUpsilonRapidity_ep_%dx%d.png", eEnergy, pEnergy));
 }
