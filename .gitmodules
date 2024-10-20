@@ -1,0 +1,3 @@
+[submodule "UpsilonResolution/Generator/estarlight"]
+	path = UpsilonResolution/Generator/estarlight
+	url = git@github.com:ashleyahram/estarlight.git
