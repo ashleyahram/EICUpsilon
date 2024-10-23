@@ -40,7 +40,7 @@ Simulate each of the Upsilon state using the provided input cards and combine th
   ```./combineHepMC.sh <file1Name> <file2Name> <file3Name> <combinedFileName>``` <br>
 
 ## Add Beam Effects with AfterBurner
-Get and run eic-shell
+Get and run eic-shell <br>
 
-Take the generated outputs and run afterburner with the right setting for example
+Take the generated outputs and run afterburner with the right setting for example <br>
   ```abconv <inputfileName>.hepmc -o <outputfileName> -l 178000```
